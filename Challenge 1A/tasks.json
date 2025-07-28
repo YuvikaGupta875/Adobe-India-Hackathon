@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "docker-build-1b",
+      "type": "shell",
+      "command": "docker build --platform linux/amd64 -t adobe-extractor-1b:dev .",
+      "problemMatcher": []
+    },
+    {
+      "label": "run-1b",
+      "type": "shell",
+      "command": "docker run --rm -v ${workspaceFolder}/Challenge_1b:/app/input --network none adobe-extractor-1b:dev",
+      "dependsOn": ["docker-build-1b"],
+      "problemMatcher": []
+    }
+  ]
+}

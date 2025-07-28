@@ -1,0 +1,13 @@
+{
+  "name": "adobe-dev-1b",
+  "dockerFile": "../Dockerfile",
+  "context": "..",
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    "source=${localWorkspaceFolder}/Challenge_1b,target=/app/input,type=bind,consistency=cached"
+  ],
+  "extensions": [
+    "ms-python.python",
+    "ms-azuretools.vscode-docker"
+  ]
+}
